@@ -58,8 +58,11 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Classes\BookingAvailability.aspx" />
+    <Content Include="Classes\Cancel Booking.aspx" />
     <Content Include="Classes\CreateBooking.aspx" />
+    <Content Include="Classes\Room Availability and Status.aspx" />
     <Content Include="Classes\Update Booking.aspx" />
+    <Content Include="Classes\Update Room Availability and Status.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -70,6 +73,13 @@
     <Compile Include="Classes\BookingAvailability.aspx.designer.cs">
       <DependentUpon>BookingAvailability.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Classes\Cancel Booking.aspx.cs">
+      <DependentUpon>Cancel Booking.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Classes\Cancel Booking.aspx.designer.cs">
+      <DependentUpon>Cancel Booking.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Classes\CreateBooking.aspx.cs">
       <DependentUpon>CreateBooking.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -77,12 +87,26 @@
     <Compile Include="Classes\CreateBooking.aspx.designer.cs">
       <DependentUpon>CreateBooking.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Classes\Room Availability and Status.aspx.cs">
+      <DependentUpon>Room Availability and Status.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Classes\Room Availability and Status.aspx.designer.cs">
+      <DependentUpon>Room Availability and Status.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Classes\Update Booking.aspx.cs">
       <DependentUpon>Update Booking.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Classes\Update Booking.aspx.designer.cs">
       <DependentUpon>Update Booking.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\Update Room Availability and Status.aspx.cs">
+      <DependentUpon>Update Room Availability and Status.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Classes\Update Room Availability and Status.aspx.designer.cs">
+      <DependentUpon>Update Room Availability and Status.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
