@@ -57,9 +57,33 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Classes\BookingAvailability.aspx" />
+    <Content Include="Classes\CreateBooking.aspx" />
+    <Content Include="Classes\Update Booking.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\BookingAvailability.aspx.cs">
+      <DependentUpon>BookingAvailability.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Classes\BookingAvailability.aspx.designer.cs">
+      <DependentUpon>BookingAvailability.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\CreateBooking.aspx.cs">
+      <DependentUpon>CreateBooking.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Classes\CreateBooking.aspx.designer.cs">
+      <DependentUpon>CreateBooking.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\Update Booking.aspx.cs">
+      <DependentUpon>Update Booking.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Classes\Update Booking.aspx.designer.cs">
+      <DependentUpon>Update Booking.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -71,7 +95,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Classes\" />
     <Folder Include="DBClasses\" />
     <Folder Include="Images\" />
     <Folder Include="Others\" />
@@ -89,7 +112,7 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerPort>54556</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
           <IISUrl>http://localhost:56207/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
