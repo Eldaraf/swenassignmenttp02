@@ -61,8 +61,10 @@
     <Content Include="Classes\Cancel Booking.aspx" />
     <Content Include="Classes\CreateBooking.aspx" />
     <Content Include="Classes\Room Availability and Status.aspx" />
+    <Content Include="Classes\Room Updated.aspx" />
     <Content Include="Classes\Update Booking.aspx" />
     <Content Include="Classes\Update Room Availability and Status.aspx" />
+    <Content Include="Classes\Updated.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -94,6 +96,13 @@
     <Compile Include="Classes\Room Availability and Status.aspx.designer.cs">
       <DependentUpon>Room Availability and Status.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Classes\Room Updated.aspx.cs">
+      <DependentUpon>Room Updated.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Classes\Room Updated.aspx.designer.cs">
+      <DependentUpon>Room Updated.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Classes\Update Booking.aspx.cs">
       <DependentUpon>Update Booking.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -107,6 +116,13 @@
     </Compile>
     <Compile Include="Classes\Update Room Availability and Status.aspx.designer.cs">
       <DependentUpon>Update Room Availability and Status.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\Updated.aspx.cs">
+      <DependentUpon>Updated.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Classes\Updated.aspx.designer.cs">
+      <DependentUpon>Updated.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
