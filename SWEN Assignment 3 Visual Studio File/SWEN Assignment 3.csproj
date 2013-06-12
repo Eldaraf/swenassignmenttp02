@@ -60,6 +60,7 @@
     <Content Include="Classes\BookingAvailability.aspx" />
     <Content Include="Classes\Cancel Booking.aspx" />
     <Content Include="Classes\CreateBooking.aspx" />
+    <Content Include="Classes\Invoice Generation.aspx" />
     <Content Include="Classes\Room Availability and Status.aspx" />
     <Content Include="Classes\Room Updated.aspx" />
     <Content Include="Classes\Update Booking.aspx" />
@@ -88,6 +89,13 @@
     </Compile>
     <Compile Include="Classes\CreateBooking.aspx.designer.cs">
       <DependentUpon>CreateBooking.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\Invoice Generation.aspx.cs">
+      <DependentUpon>Invoice Generation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Classes\Invoice Generation.aspx.designer.cs">
+      <DependentUpon>Invoice Generation.aspx</DependentUpon>
     </Compile>
     <Compile Include="Classes\Room Availability and Status.aspx.cs">
       <DependentUpon>Room Availability and Status.aspx</DependentUpon>
