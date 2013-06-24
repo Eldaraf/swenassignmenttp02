@@ -10,7 +10,7 @@ namespace SWEN_Assignment_3.DBClasses
 {
     public class DBManager
     {
-        public static int InsertGuestDetails (Guest_Details gd)
+        public static int InsertGuestDetails (GuestDetails gd)
         {
             int rowadded = 0;
             SqlConnection conn = null;
@@ -22,7 +22,7 @@ namespace SWEN_Assignment_3.DBClasses
 
                 SqlCommand comm = new SqlCommand();
                 comm.Connection = conn;
-                comm.CommandText = "INSERT INTO Guest_Details(nric, firstName, lastName, phoneNumber, emailAddress, numberOfGuest) VALUES(@nric, @firstName, @lastName, @phoneNumber, @emailAddress, @numberOfGuest)";
+                comm.CommandText = "INSERT INTO GuestDetails(nric, firstName, lastName, phoneNumber, emailAddress, numberOfGuest) VALUES(@nric, @firstName, @lastName, @phoneNumber, @emailAddress, @numberOfGuest)";
                 
                 comm.Parameters.AddWithValue("@nric", gd.nric);
                 comm.Parameters.AddWithValue("@firstName", gd.firstName);
@@ -42,5 +42,9 @@ namespace SWEN_Assignment_3.DBClasses
             return rowadded;
                 
         }
+
+        //public static int InsertGuestBookingDetails (
+        //{
+        //}
     }
 }
