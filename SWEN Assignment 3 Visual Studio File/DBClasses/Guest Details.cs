@@ -5,7 +5,7 @@ using System.Web;
 
 namespace SWEN_Assignment_3.DBClasses
 {
-    public class Guest_Details
+    public class GuestDetails
     {
         public string nric { get; set; }
         public string lastName { get; set; }
