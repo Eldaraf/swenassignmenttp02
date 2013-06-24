@@ -57,25 +57,17 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Classes\BookingAvailability.aspx" />
     <Content Include="Classes\Cancel Booking.aspx" />
-    <Content Include="Classes\CreateBooking.aspx" />
-    <Content Include="Classes\Invoice Generation.aspx" />
-    <Content Include="Classes\Room Availability and Status.aspx" />
-    <Content Include="Classes\Room Updated.aspx" />
+    <Content Include="Classes\Check Room Availability.aspx" />
+    <Content Include="Classes\Create Booking.aspx" />
+    <Content Include="Classes\Delete Confirmed.aspx" />
+    <Content Include="Classes\Home Page.aspx" />
     <Content Include="Classes\Update Booking.aspx" />
-    <Content Include="Classes\Update Room Availability and Status.aspx" />
-    <Content Include="Classes\Updated.aspx" />
+    <Content Include="Classes\Update RAS.aspx" />
+    <Content Include="Classes\Update Successful.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Classes\BookingAvailability.aspx.cs">
-      <DependentUpon>BookingAvailability.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Classes\BookingAvailability.aspx.designer.cs">
-      <DependentUpon>BookingAvailability.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Classes\Cancel Booking.aspx.cs">
       <DependentUpon>Cancel Booking.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -83,33 +75,33 @@
     <Compile Include="Classes\Cancel Booking.aspx.designer.cs">
       <DependentUpon>Cancel Booking.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Classes\CreateBooking.aspx.cs">
-      <DependentUpon>CreateBooking.aspx</DependentUpon>
+    <Compile Include="Classes\Check Room Availability.aspx.cs">
+      <DependentUpon>Check Room Availability.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Classes\CreateBooking.aspx.designer.cs">
-      <DependentUpon>CreateBooking.aspx</DependentUpon>
+    <Compile Include="Classes\Check Room Availability.aspx.designer.cs">
+      <DependentUpon>Check Room Availability.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Classes\Invoice Generation.aspx.cs">
-      <DependentUpon>Invoice Generation.aspx</DependentUpon>
+    <Compile Include="Classes\Create Booking.aspx.cs">
+      <DependentUpon>Create Booking.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Classes\Invoice Generation.aspx.designer.cs">
-      <DependentUpon>Invoice Generation.aspx</DependentUpon>
+    <Compile Include="Classes\Create Booking.aspx.designer.cs">
+      <DependentUpon>Create Booking.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Classes\Room Availability and Status.aspx.cs">
-      <DependentUpon>Room Availability and Status.aspx</DependentUpon>
+    <Compile Include="Classes\Delete Confirmed.aspx.cs">
+      <DependentUpon>Delete Confirmed.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Classes\Room Availability and Status.aspx.designer.cs">
-      <DependentUpon>Room Availability and Status.aspx</DependentUpon>
+    <Compile Include="Classes\Delete Confirmed.aspx.designer.cs">
+      <DependentUpon>Delete Confirmed.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Classes\Room Updated.aspx.cs">
-      <DependentUpon>Room Updated.aspx</DependentUpon>
+    <Compile Include="Classes\Home Page.aspx.cs">
+      <DependentUpon>Home Page.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Classes\Room Updated.aspx.designer.cs">
-      <DependentUpon>Room Updated.aspx</DependentUpon>
+    <Compile Include="Classes\Home Page.aspx.designer.cs">
+      <DependentUpon>Home Page.aspx</DependentUpon>
     </Compile>
     <Compile Include="Classes\Update Booking.aspx.cs">
       <DependentUpon>Update Booking.aspx</DependentUpon>
@@ -118,20 +110,21 @@
     <Compile Include="Classes\Update Booking.aspx.designer.cs">
       <DependentUpon>Update Booking.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Classes\Update Room Availability and Status.aspx.cs">
-      <DependentUpon>Update Room Availability and Status.aspx</DependentUpon>
+    <Compile Include="Classes\Update RAS.aspx.cs">
+      <DependentUpon>Update RAS.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Classes\Update Room Availability and Status.aspx.designer.cs">
-      <DependentUpon>Update Room Availability and Status.aspx</DependentUpon>
+    <Compile Include="Classes\Update RAS.aspx.designer.cs">
+      <DependentUpon>Update RAS.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Classes\Updated.aspx.cs">
-      <DependentUpon>Updated.aspx</DependentUpon>
+    <Compile Include="Classes\Update Successful.aspx.cs">
+      <DependentUpon>Update Successful.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Classes\Updated.aspx.designer.cs">
-      <DependentUpon>Updated.aspx</DependentUpon>
+    <Compile Include="Classes\Update Successful.aspx.designer.cs">
+      <DependentUpon>Update Successful.aspx</DependentUpon>
     </Compile>
+    <Compile Include="DBClasses\Class1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -143,7 +136,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="DBClasses\" />
     <Folder Include="Images\" />
     <Folder Include="Others\" />
   </ItemGroup>
