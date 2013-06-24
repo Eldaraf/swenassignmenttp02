@@ -49,7 +49,7 @@ First Name:
         <asp:Button ID="Button1" runat="server" Text="Delete Booking" style="text-align: left" Width="108px" OnClick="Button1_Click" />
     
     &nbsp;
-        <asp:Button ID="Button3" runat="server" Text="Confirm Delete?" Visible="False" Width="109px" />
+        <asp:Button ID="Button3" runat="server" Text="Confirm Delete?" Visible="False" Width="109px" OnClick="Button3_Click" />
 &nbsp;
     
     </div>

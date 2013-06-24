@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace SWEN_Assignment_3.Classes
 {
-    public partial class Cancel_Booking : System.Web.UI.Page
+    public partial class Delete_Confirmed : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -16,12 +16,7 @@ namespace SWEN_Assignment_3.Classes
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-
-        }
-
-        protected void Button3_Click(object sender, EventArgs e)
-        {
-            Response.Redirect("Delete Confirmed.aspx");
+            Response.Redirect("Home Page.aspx");
         }
     }
 }
