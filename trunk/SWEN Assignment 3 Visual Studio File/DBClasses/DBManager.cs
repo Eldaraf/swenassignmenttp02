@@ -22,7 +22,7 @@ namespace SWEN_Assignment_3.DBClasses
 
                 SqlCommand comm = new SqlCommand();
                 comm.Connection = conn;
-                comm.CommandText = "INSERT INTO GuestDetails(nric, firstName, lastName, phoneNumber, emailAddress, numberOfGuest) VALUES(@nric, @firstName, @lastName, @phoneNumber, @emailAddress, @numberOfGuest)";
+                comm.CommandText = "INSERT INTO Guest_Details(nric, firstName, lastName, phoneNumber, emailAddress, numberOfGuest) VALUES(@nric, @firstName, @lastName, @phoneNumber, @emailAddress, @numberOfGuest)";
                 
                 comm.Parameters.AddWithValue("@nric", gd.nric);
                 comm.Parameters.AddWithValue("@firstName", gd.firstName);
@@ -43,8 +43,37 @@ namespace SWEN_Assignment_3.DBClasses
                 
         }
 
-        //public static int InsertGuestBookingDetails (
-        //{
-        //}
+        public static int InsertGuestBookingDetails (BookingDetails bd)
+        {
+            int rowadded = 0;
+            SqlConnection conn = null;
+            try
+            {
+                conn = new SqlConnection();
+                conn.ConnectionString = ConfigurationManager.ConnectionStrings["DBscriptConnectionString"].ConnectionString;
+                conn.Open();
+
+                SqlCommand comm = new SqlCommand();
+                comm.Connection = conn;
+                comm.CommandText = "INSERT INTO Room_Details(bookingID, nric, roomStatus, noOfGuest, roomNumber, roomLocation, roomType) VALUES(@bookingID, @nric, @noOfGuest, @roomStatus, @roomNumber, @roomLocation, @roomType)";
+
+                comm.Parameters.AddWithValue("@bookingID", bd.bookingID);
+                comm.Parameters.AddWithValue("@nric", bd.nric);
+                comm.Parameters.AddWithValue("@noOfGuest", bd.noOfGuest);
+                comm.Parameters.AddWithValue("@roomStatus", bd.roomStatus);
+                comm.Parameters.AddWithValue("@roomNumber", bd.roomNumber);
+                comm.Parameters.AddWithValue("@roomLocation", bd.roomLocation);
+                comm.Parameters.AddWithValue("@roomType", bd.roomType);
+
+                rowadded = comm.ExecuteNonQuery();
+
+            }
+
+            catch (SqlException e)
+            {
+                throw e;
+            }
+            return rowadded;
+        }
     }
 }

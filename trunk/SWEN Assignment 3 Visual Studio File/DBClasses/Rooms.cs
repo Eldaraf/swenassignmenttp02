@@ -11,6 +11,7 @@ namespace SWEN_Assignment_3.DBClasses
         public string nric { get; set; }
         public string roomStatus { get; set; }
         public string noOfGuest { get; set; }
+        public string roomNumber { get; set; }
         public string roomLocation { get; set; }
         public string roomType { get; set; }
     }

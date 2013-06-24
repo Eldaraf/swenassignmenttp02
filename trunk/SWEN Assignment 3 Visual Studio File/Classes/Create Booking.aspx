@@ -11,7 +11,7 @@
     <div style="width: 278px; text-align: right">
     
         Booking ID:
-        <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+        <asp:TextBox ID="bookingIDTB" runat="server"></asp:TextBox>
         <br />
         <br />
         NRIC:
@@ -40,14 +40,17 @@ First Name:
         Number Of Guest:
         <asp:TextBox ID="noOfGuestTB" runat="server"></asp:TextBox>
         <br />
+        Room Status:
+        <asp:TextBox ID="roomStatusTB" runat="server"></asp:TextBox>
+        <br />
         Room Number
         <asp:TextBox ID="roomNumberTB" runat="server"></asp:TextBox>
         <br />
         Room Location:
-        <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
+        <asp:TextBox ID="roomLocationTB" runat="server"></asp:TextBox>
         <br />
         Room Type:
-        <asp:TextBox ID="TextBox3" runat="server"></asp:TextBox>
+        <asp:TextBox ID="roomTypeTB" runat="server"></asp:TextBox>
         <br />
         <br />
         <asp:Button ID="Button1" runat="server" Text="Create Booking" style="text-align: left" Width="108px" OnClick="Button1_Click" />
