@@ -22,13 +22,13 @@ namespace SWEN_Assignment_3.Classes {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
-        /// TextBox1 control.
+        /// bookingIDTB control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox1;
+        protected global::System.Web.UI.WebControls.TextBox bookingIDTB;
         
         /// <summary>
         /// nricTB control.
@@ -103,6 +103,15 @@ namespace SWEN_Assignment_3.Classes {
         protected global::System.Web.UI.WebControls.TextBox noOfGuestTB;
         
         /// <summary>
+        /// roomStatusTB control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox roomStatusTB;
+        
+        /// <summary>
         /// roomNumberTB control.
         /// </summary>
         /// <remarks>
@@ -112,22 +121,22 @@ namespace SWEN_Assignment_3.Classes {
         protected global::System.Web.UI.WebControls.TextBox roomNumberTB;
         
         /// <summary>
-        /// TextBox2 control.
+        /// roomLocationTB control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox2;
+        protected global::System.Web.UI.WebControls.TextBox roomLocationTB;
         
         /// <summary>
-        /// TextBox3 control.
+        /// roomTypeTB control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox3;
+        protected global::System.Web.UI.WebControls.TextBox roomTypeTB;
         
         /// <summary>
         /// Button1 control.
