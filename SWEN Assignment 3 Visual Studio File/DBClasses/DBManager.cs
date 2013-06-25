@@ -77,41 +77,7 @@ namespace SWEN_Assignment_3.DBClasses
             return rowadded;
         }
 
-        public static bool LoginCheck(String user, String pass)
-        {
-            bool result = false;
-            SqlConnection conn = null;
-
-            try
-            {
-                //establish connection with DB
-                conn = new SqlConnection();
-                conn.ConnectionString = ConfigurationManager.ConnectionStrings["EldsDBConnString"].ConnectionString;
-                conn.Open(); //open connection with DB
-
-                //Prepare SQL command and pass parameters
-                SqlCommand comm = new SqlCommand();
-                comm.Connection = conn;
-                comm.CommandText = "Select * FROM Guest_Details WHERE nric=@nric INNER JOIN Room_Details ON (Guest_Details.@nric = Room_Details.@nric)";
-                comm.Parameters.AddWithValue("@username", user);
-                comm.Parameters.AddWithValue("@password", pass);
-                SqlDataReader dr = comm.ExecuteReader();
-
-                //if data exist, set status = true
-                if (dr.Read())
-                {
-                    result = true;
-                }
-
-                dr.Close();
-                conn.Close();
-            }
-            catch (SqlException f)
-            {
-                throw f;
-            }
-            return result;
-        }
+ 
 
 
         public static int UpdateGuestDetails(GuestDetails gd)
@@ -121,11 +87,11 @@ namespace SWEN_Assignment_3.DBClasses
             try
             {
                 conn = new SqlConnection();
-                conn.ConnectionString = ConfigurationManager.ConnectionStrings["EldsDBConnString"].ConnectionString;
+                conn.ConnectionString = ConfigurationManager.ConnectionStrings["DBscriptConnectionString"].ConnectionString;
                 conn.Open();
                 SqlCommand comm = new SqlCommand();
                 comm.Connection = conn;
-                comm.CommandText = "UPDATE Guest_Details SET nric=@nric, firstname=@firstname, lastName=@lastName, phonenumber=@phoneNumber, emailAddress=@emailAddress, numberOfGuest=@noOfGuest";
+                comm.CommandText = "UPDATE Guest_Details SET nric=@nric, firstname=@firstname, lastName=@lastName, phonenumber=@phoneNumber, emailAddress=@emailAddress, numberOfGuest=@numberOfGuest";
                 comm.Parameters.AddWithValue("@nric", gd.nric);
                 comm.Parameters.AddWithValue("@firstName", gd.firstName);
                 comm.Parameters.AddWithValue("@lastName", gd.lastName);
@@ -149,12 +115,11 @@ namespace SWEN_Assignment_3.DBClasses
             try
             {
                 conn = new SqlConnection();
-                conn.ConnectionString = ConfigurationManager.ConnectionStrings["EldsDBConnString"].ConnectionString;
+                conn.ConnectionString = ConfigurationManager.ConnectionStrings["DBscriptConnectionString"].ConnectionString;
                 conn.Open();
                 SqlCommand comm = new SqlCommand();
                 comm.Connection = conn;
-                comm.CommandText = "UPDATE RoomDetails SET nric=@nric, noOfGuest=@noOfGuest, roomStatus=@roomStatus, roomNumber=@roomNumber, roomLocation=@roomLocation, roomType=@roomType";
-                comm.Parameters.AddWithValue("@bookingID", bd.bookingID);
+                comm.CommandText = "UPDATE Room_Details SET nric=@nric, noOfGuest=@noOfGuest, roomStatus=@roomStatus, roomNumber=@roomNumber, roomLocation=@roomLocation, roomType=@roomType";
                 comm.Parameters.AddWithValue("@nric", bd.nric);
                 comm.Parameters.AddWithValue("@noOfGuest", bd.noOfGuest);
                 comm.Parameters.AddWithValue("@roomStatus", bd.roomStatus);
