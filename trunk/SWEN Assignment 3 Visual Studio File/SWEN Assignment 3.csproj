@@ -65,7 +65,9 @@
     <Content Include="Classes\Update Booking.aspx" />
     <Content Include="Classes\Update RAS.aspx" />
     <Content Include="Classes\Update Successful.aspx" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Classes\Cancel Booking.aspx.cs">
