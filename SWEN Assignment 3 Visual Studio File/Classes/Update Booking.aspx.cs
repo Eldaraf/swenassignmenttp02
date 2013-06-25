@@ -53,7 +53,7 @@ namespace SWEN_Assignment_3.Classes
                 con.Close();
             }
 
-            nricTB.ReadOnly = false;
+
             firstNameTB.ReadOnly = false;
             lastNameTB.ReadOnly = false;
             phoneNumberTB.ReadOnly = false;
