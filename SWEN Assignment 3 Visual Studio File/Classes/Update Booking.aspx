@@ -6,7 +6,7 @@
 <head runat="server">
     <title></title>
 </head>
-<body style="width: 307px; text-align: right">
+<body style="width: 392px; text-align: right">
     <form id="form1" runat="server">
     <div>
     
@@ -55,9 +55,15 @@ First Name:
         <asp:TextBox ID="roomTypeTB" runat="server" ReadOnly="True"></asp:TextBox>
         <br />
         <br />
-        <asp:Button ID="Button1" runat="server" Text="Update Booking" style="text-align: left" Width="108px" OnClick="Button1_Click" />
     
         <asp:Label ID="errormsg" runat="server" Text=""></asp:Label>
+    
+        <br />
+        <asp:Button ID="Button1" runat="server" Text="Update Booking" style="text-align: left" Width="113px" OnClick="Button1_Click" />
+    
+        &nbsp;&nbsp;&nbsp;
+    
+        <asp:Button ID="Button3" runat="server" Text="Home" OnClick="Button3_Click" Width="59px" />
     
     </div>
     </form>

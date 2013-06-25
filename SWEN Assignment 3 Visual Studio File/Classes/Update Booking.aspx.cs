@@ -94,7 +94,7 @@ namespace SWEN_Assignment_3.Classes
                     + "emailAddress=" + emailAddressTB.Text + "&"
                     + "numberOfGuest" + noOfGuestTB.Text;
 
-                Server.Transfer("Home Page.aspx?" + querystring);
+                errormsg.Text = "Update Successful!";
             }
             else
             {
@@ -110,11 +110,18 @@ namespace SWEN_Assignment_3.Classes
                    + "roomNumber=" + roomNumberTB.Text + "&"
                    + "roomLocation=" + roomLocationTB.Text + "&"
                    + "roomType=" + roomTypeTB.Text;
+
+                errormsg.Text = "Update Successful!";
             }
             else
             {
                 errormsg.Text = "Error, cannot Update";
             }
+        }
+
+        protected void Button3_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Home Page.aspx");
         }
 
         }

@@ -136,5 +136,34 @@ namespace SWEN_Assignment_3.DBClasses
             return rowupdated;
         }
 
+        public static int Deleteguest(string nric)
+        {
+            int rowdeleted = 0;
+            SqlConnection conn = null;
+            try
+            {
+                //establish connection with DB
+                conn = new SqlConnection();
+                conn.ConnectionString =
+                    ConfigurationManager.ConnectionStrings["DBscriptConnectionString"].ConnectionString;
+                conn.Open(); //open connection with DB
+
+                //Prepare SQL command and pass parameters
+                SqlCommand comm = new SqlCommand();
+                comm.Connection = conn;
+                comm.CommandText = " DELETE FROM Guest_Details INNER JOIN Room_Details ON (Guest_Details.nric = Room_Details.nric) WHERE Guest_Details.nric=@nric";
+                comm.Parameters.AddWithValue("@nric", nric);
+                //Execute SQL commmand and read data
+                rowdeleted = comm.ExecuteNonQuery();
+
+            }
+            catch (SqlException e)
+            {
+                throw e;
+            }
+            return rowdeleted;
+        }
+
+
     }
 }
