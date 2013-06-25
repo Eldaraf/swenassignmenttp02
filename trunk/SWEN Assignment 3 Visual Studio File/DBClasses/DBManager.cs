@@ -91,8 +91,7 @@ namespace SWEN_Assignment_3.DBClasses
                 conn.Open();
                 SqlCommand comm = new SqlCommand();
                 comm.Connection = conn;
-                comm.CommandText = "UPDATE Guest_Details SET nric=@nric, firstname=@firstname, lastName=@lastName, phonenumber=@phoneNumber, emailAddress=@emailAddress, numberOfGuest=@numberOfGuest";
-                comm.Parameters.AddWithValue("@nric", gd.nric);
+                comm.CommandText = "UPDATE Guest_Details SET firstname=@firstname, lastName=@lastName, phonenumber=@phoneNumber, emailAddress=@emailAddress, numberOfGuest=@numberOfGuest";
                 comm.Parameters.AddWithValue("@firstName", gd.firstName);
                 comm.Parameters.AddWithValue("@lastName", gd.lastName);
                 comm.Parameters.AddWithValue("@phoneNumber", gd.phoneNumber);
