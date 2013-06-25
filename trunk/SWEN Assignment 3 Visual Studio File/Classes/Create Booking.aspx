@@ -52,10 +52,13 @@ First Name:
         Room Type:
         <asp:TextBox ID="roomTypeTB" runat="server"></asp:TextBox>
         <br />
+    
+        <asp:Label ID="errormsg" runat="server" Text=""></asp:Label>
+    
         <br />
         <asp:Button ID="Button1" runat="server" Text="Create Booking" style="text-align: left" Width="108px" OnClick="Button1_Click" />
     
-        <asp:Label ID="errormsg" runat="server" Text=""></asp:Label>
+        &nbsp; <asp:Button ID="Button2" runat="server" Text="Home Page" OnClick="Button2_Click" Width="93px" />
     
     </div>
     </form>

@@ -148,6 +148,15 @@ namespace SWEN_Assignment_3.Classes {
         protected global::System.Web.UI.WebControls.TextBox roomTypeTB;
         
         /// <summary>
+        /// errormsg control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label errormsg;
+        
+        /// <summary>
         /// Button1 control.
         /// </summary>
         /// <remarks>
@@ -157,12 +166,12 @@ namespace SWEN_Assignment_3.Classes {
         protected global::System.Web.UI.WebControls.Button Button1;
         
         /// <summary>
-        /// errormsg control.
+        /// Button3 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label errormsg;
+        protected global::System.Web.UI.WebControls.Button Button3;
     }
 }

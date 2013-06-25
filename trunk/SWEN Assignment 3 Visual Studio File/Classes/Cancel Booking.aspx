@@ -10,47 +10,62 @@
     <form id="form1" runat="server">
     <div style="width: 297px; text-align: right">
     
-        Booking ID:
-        <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+        NRIC:
+        <asp:TextBox ID="nricsearch" runat="server"></asp:TextBox>
         <br />
-        <asp:Button ID="Button2" runat="server" Text="Search" />
+        <asp:Button ID="searchbtn" runat="server" Text="Search" OnClick="Button2_Click" />
         <br />
         <br />
         NRIC:
-        <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
+        <asp:TextBox ID="nricTB" runat="server" ReadOnly="True"></asp:TextBox>
         <br />
 First Name:
-        <asp:TextBox ID="TextBox3" runat="server"></asp:TextBox>
+        <asp:TextBox ID="firstNameTB" runat="server" ReadOnly="True"></asp:TextBox>
         <br />
        Last Name:
-        <asp:TextBox ID="TextBox4" runat="server"></asp:TextBox>
+        <asp:TextBox ID="lastNameTB" runat="server" ReadOnly="True"></asp:TextBox>
         <br />
         Phone Number:
-        <asp:TextBox ID="TextBox6" runat="server"></asp:TextBox>
+        <asp:TextBox ID="phoneNumberTB" runat="server" ReadOnly="True"></asp:TextBox>
         <br />
         Email Address: 
-        <asp:TextBox ID="TextBox5" runat="server"></asp:TextBox>
+        <asp:TextBox ID="emailAddressTB" runat="server" ReadOnly="True"></asp:TextBox>
         <br />
         <br />
         Check In Time:
-        <asp:TextBox ID="TextBox7" runat="server"></asp:TextBox>
+        <asp:TextBox ID="checkInTimeTB" runat="server" ReadOnly="True"></asp:TextBox>
         <br />
         Check In Date:
-        <asp:TextBox ID="TextBox8" runat="server"></asp:TextBox>
+        <asp:TextBox ID="checkInDateTB" runat="server" ReadOnly="True"></asp:TextBox>
         <br />
         <br />
         Number Of Guest:
-        <asp:TextBox ID="TextBox9" runat="server"></asp:TextBox>
+        <asp:TextBox ID="noOfGuestTB" runat="server" ReadOnly="True"></asp:TextBox>
+        <br />
+        Room Status:
+        <asp:TextBox ID="roomStatusTB" runat="server" ReadOnly="True"></asp:TextBox>
         <br />
         Room Number
-        <asp:TextBox ID="TextBox10" runat="server"></asp:TextBox>
+        <asp:TextBox ID="roomNumberTB" runat="server" ReadOnly="True"></asp:TextBox>
+        <br />
+        Room Location:
+        <asp:TextBox ID="roomLocationTB" runat="server" ReadOnly="True"></asp:TextBox>
+        <br />
+        Room Type:
+        <asp:TextBox ID="roomTypeTB" runat="server" ReadOnly="True"></asp:TextBox>
         <br />
         <br />
-        <asp:Button ID="Button1" runat="server" Text="Delete Booking" style="text-align: left" Width="108px" OnClick="Button1_Click" />
     
-    &nbsp;
-        <asp:Button ID="Button3" runat="server" Text="Confirm Delete?" Visible="False" Width="109px" OnClick="Button3_Click" />
-&nbsp;
+        <asp:Label ID="errormsg" runat="server" Text=""></asp:Label>
+    
+        <br />
+        <asp:Button ID="Button1" runat="server" Text="Delete Booking" style="text-align: left" Width="113px" OnClick="Button1_Click" />
+    
+        &nbsp;&nbsp;&nbsp;
+    
+        <asp:Button ID="Button3" runat="server" Text="Confirm Delete?" OnClick="Button3_Click" Width="112px" Visible="False" />
+    
+        <asp:Button ID="Button4" runat="server" Text="Home" Width="72px" OnClick="Button4_Click" />
     
     </div>
     </form>

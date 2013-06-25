@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SWEN_Assignment_3.DBClasses;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -16,12 +17,27 @@ namespace SWEN_Assignment_3.Classes
 
         protected void Button1_Click(object sender, EventArgs e)
         {
+            Button1.Visible = false;
+            Button3.Visible = true;
+        }
 
+
+        protected void Button4_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Home Page.aspx");
         }
 
         protected void Button3_Click(object sender, EventArgs e)
         {
-            Response.Redirect("Delete Confirmed.aspx");
+            int row = DBManager.Deleteguest(nricsearch.Text);
+            if (row > 0)
+            {
+                errormsg.Text = "Delete Confirmed";
+            }
+            else
+            {
+                errormsg.Text = "Cannot Delete";
+            }
         }
     }
 }
