@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -13,5 +14,55 @@ namespace SWEN_Assignment_3.Classes
         {
 
         }
+
+        protected void Button2_Click(object sender, EventArgs e)
+        {
+            string connectionString = "Data Source=(local);Initial Catalog=RoomBooking;Integrated Security=False;User ID=User;Password=Password_2013";
+            SqlConnection con = new SqlConnection(connectionString);
+
+            string selectSql = @"Select * FROM Guest_Details INNER JOIN Room_Details ON (Guest_Details.nric = Room_Details.nric) WHERE Guest_Details.nric=@nric";
+            SqlCommand com = new SqlCommand(selectSql, con);
+
+            try
+            {
+                con.Open();
+                com.Parameters.AddWithValue("@nric", TextBox1.Text); 
+ 
+                using (SqlDataReader read = com.ExecuteReader())
+                {
+                      
+                    while (read.Read())
+                    {
+                        nricTB.Text = (read["nric"].ToString());
+                        firstNameTB.Text = (read["firstName"].ToString());
+                        lastNameTB.Text = (read["lastName"].ToString());
+                        phoneNumberTB.Text = (read["phoneNumber"].ToString());
+                        emailAddressTB.Text = (read["emailAddress"].ToString());
+                        noOfGuestTB.Text = (read["noOfGuest"].ToString());
+                        roomStatusTB.Text = (read["roomStatus"].ToString());
+                        roomNumberTB.Text = (read["roomNumber"].ToString());
+                        roomLocationTB.Text = (read["roomLocation"].ToString());
+                        roomTypeTB.Text = (read["roomType"].ToString());
+
+                    }
+                }
+            }
+            finally
+            {
+                con.Close();
+            }
+
+            nricTB.ReadOnly = false;
+            firstNameTB.ReadOnly = false;
+            lastNameTB.ReadOnly = false;
+            phoneNumberTB.ReadOnly = false;
+            emailAddressTB.ReadOnly = false;
+            noOfGuestTB.ReadOnly = false;
+            roomStatusTB.ReadOnly = false;
+            roomNumberTB.ReadOnly = false;
+            roomLocationTB.ReadOnly = false;
+            roomTypeTB.ReadOnly = false;
+        }
+
+        }
     }
-}
