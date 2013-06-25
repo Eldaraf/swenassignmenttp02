@@ -8,11 +8,18 @@
 </head>
 <body>
     <form id="form1" runat="server">
-    <div style="text-align: center">
+    <div style="text-align: center; height: 193px">
     
     <div>
     
     </div>
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
         <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Create Booking" Width="123px" />
 &nbsp;
         <asp:Button ID="Button2" runat="server" Text="Update Booking" Width="123px" OnClick="Button2_Click" />
