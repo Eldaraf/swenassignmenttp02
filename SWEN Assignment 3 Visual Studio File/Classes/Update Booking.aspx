@@ -17,33 +17,42 @@
         <br />
         <br />
         NRIC:
-        <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
+        <asp:TextBox ID="TextBox2" runat="server" ReadOnly="True"></asp:TextBox>
         <br />
 First Name:
-        <asp:TextBox ID="TextBox3" runat="server"></asp:TextBox>
+        <asp:TextBox ID="TextBox3" runat="server" ReadOnly="True"></asp:TextBox>
         <br />
        Last Name:
-        <asp:TextBox ID="TextBox4" runat="server"></asp:TextBox>
+        <asp:TextBox ID="TextBox4" runat="server" ReadOnly="True"></asp:TextBox>
         <br />
         Phone Number:
-        <asp:TextBox ID="TextBox6" runat="server"></asp:TextBox>
+        <asp:TextBox ID="TextBox6" runat="server" ReadOnly="True"></asp:TextBox>
         <br />
         Email Address: 
-        <asp:TextBox ID="TextBox5" runat="server"></asp:TextBox>
+        <asp:TextBox ID="TextBox5" runat="server" ReadOnly="True"></asp:TextBox>
         <br />
         <br />
         Check In Time:
-        <asp:TextBox ID="TextBox7" runat="server"></asp:TextBox>
+        <asp:TextBox ID="TextBox7" runat="server" ReadOnly="True"></asp:TextBox>
         <br />
         Check In Date:
-        <asp:TextBox ID="TextBox8" runat="server"></asp:TextBox>
+        <asp:TextBox ID="TextBox8" runat="server" ReadOnly="True"></asp:TextBox>
         <br />
         <br />
         Number Of Guest:
-        <asp:TextBox ID="TextBox9" runat="server"></asp:TextBox>
+        <asp:TextBox ID="TextBox9" runat="server" ReadOnly="True"></asp:TextBox>
+        <br />
+        Room Status:
+        <asp:TextBox ID="roomStatusTB" runat="server"></asp:TextBox>
         <br />
         Room Number
-        <asp:TextBox ID="TextBox10" runat="server"></asp:TextBox>
+        <asp:TextBox ID="roomNumberTB" runat="server"></asp:TextBox>
+        <br />
+        Room Location:
+        <asp:TextBox ID="roomLocationTB" runat="server"></asp:TextBox>
+        <br />
+        Room Type:
+        <asp:TextBox ID="roomTypeTB" runat="server"></asp:TextBox>
         <br />
         <br />
         <asp:Button ID="Button1" runat="server" Text="Update Booking" style="text-align: left" Width="108px" />

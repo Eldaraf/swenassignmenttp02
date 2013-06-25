@@ -75,5 +75,41 @@ namespace SWEN_Assignment_3.DBClasses
             }
             return rowadded;
         }
+
+        public static bool LoginCheck(String user, String pass)
+        {
+            bool result = false;
+            SqlConnection conn = null;
+
+            try
+            {
+                //establish connection with DB
+                conn = new SqlConnection();
+                conn.ConnectionString = ConfigurationManager.ConnectionStrings["EldsDBConnString"].ConnectionString;
+                conn.Open(); //open connection with DB
+
+                //Prepare SQL command and pass parameters
+                SqlCommand comm = new SqlCommand();
+                comm.Connection = conn;
+                comm.CommandText = "Select * FROM Guest_Details WHERE nric=@nric INNER JOIN Room_Details ON (Guest_Details.@nric = Room_Details.@nric)";
+                comm.Parameters.AddWithValue("@username", user);
+                comm.Parameters.AddWithValue("@password", pass);
+                SqlDataReader dr = comm.ExecuteReader();
+
+                //if data exist, set status = true
+                if (dr.Read())
+                {
+                    result = true;
+                }
+
+                dr.Close();
+                conn.Close();
+            }
+            catch (SqlException f)
+            {
+                throw f;
+            }
+            return result;
+        }
     }
 }
