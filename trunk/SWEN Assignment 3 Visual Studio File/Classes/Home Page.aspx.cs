@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace SWEN_Assignment_3.Classes
 {
-    public partial class WebForm1 : System.Web.UI.Page
+    public partial class Home_Page : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -27,16 +27,6 @@ namespace SWEN_Assignment_3.Classes
         protected void Button3_Click(object sender, EventArgs e)
         {
             Response.Redirect("Cancel Booking.aspx");
-        }
-
-        protected void Button4_Click(object sender, EventArgs e)
-        {
-            Response.Redirect("Check Room Availability.aspx");
-        }
-
-        protected void Button5_Click(object sender, EventArgs e)
-        {
-            Response.Redirect("Update RAS.aspx");
         }
     }
 }

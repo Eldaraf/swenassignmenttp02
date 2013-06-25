@@ -39,8 +39,8 @@ namespace SWEN_Assignment_3.Classes
                         lastNameTB.Text = (read["lastName"].ToString());
                         phoneNumberTB.Text = (read["phoneNumber"].ToString());
                         emailAddressTB.Text = (read["emailAddress"].ToString());
-                        noOfGuestTB.Text = (read["noOfGuest"].ToString());
                         roomStatusTB.Text = (read["roomStatus"].ToString());
+                        noOfGuestTB.Text = (read["noOfGuest"].ToString());
                         roomNumberTB.Text = (read["roomNumber"].ToString());
                         roomLocationTB.Text = (read["roomLocation"].ToString());
                         roomTypeTB.Text = (read["roomType"].ToString());
@@ -58,8 +58,8 @@ namespace SWEN_Assignment_3.Classes
             lastNameTB.ReadOnly = false;
             phoneNumberTB.ReadOnly = false;
             emailAddressTB.ReadOnly = false;
-            noOfGuestTB.ReadOnly = false;
             roomStatusTB.ReadOnly = false;
+            noOfGuestTB.ReadOnly = false;
             roomNumberTB.ReadOnly = false;
             roomLocationTB.ReadOnly = false;
             roomTypeTB.ReadOnly = false;
@@ -77,8 +77,8 @@ namespace SWEN_Assignment_3.Classes
             gd.emailAddress = emailAddressTB.Text;
             gd.numberOfGuest = Convert.ToInt32(noOfGuestTB.Text);
 
-            bd.noOfGuest = Convert.ToInt32(noOfGuestTB.Text);
             bd.roomStatus = roomStatusTB.Text;
+            bd.noOfGuest = Convert.ToInt32(noOfGuestTB.Text);
             bd.roomNumber = roomNumberTB.Text;
             bd.roomLocation = roomNumberTB.Text;
             bd.roomType = roomTypeTB.Text;
@@ -104,8 +104,8 @@ namespace SWEN_Assignment_3.Classes
             if (rows2 > 0)
             {
                 string querystring ="nric=" + nricTB.Text + "&"
-                   + "noOfGuest=" + noOfGuestTB.Text + "&"
                    + "roomStatus=" + roomStatusTB.Text + "&"
+                   + "noOfGuest=" + noOfGuestTB.Text + "&" 
                    + "phoneNumber=" + phoneNumberTB.Text + "&"
                    + "roomNumber=" + roomNumberTB.Text + "&"
                    + "roomLocation=" + roomLocationTB.Text + "&"

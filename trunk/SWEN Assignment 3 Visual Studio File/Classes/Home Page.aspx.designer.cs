@@ -10,7 +10,7 @@
 namespace SWEN_Assignment_3.Classes {
     
     
-    public partial class WebForm1 {
+    public partial class Home_Page {
         
         /// <summary>
         /// form1 control.
@@ -47,23 +47,5 @@ namespace SWEN_Assignment_3.Classes {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button Button3;
-        
-        /// <summary>
-        /// Button4 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button4;
-        
-        /// <summary>
-        /// Button5 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button5;
     }
 }

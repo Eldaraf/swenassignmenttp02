@@ -56,12 +56,12 @@ namespace SWEN_Assignment_3.DBClasses
 
                 SqlCommand comm = new SqlCommand();
                 comm.Connection = conn;
-                comm.CommandText = "INSERT INTO Room_Details(bookingID, nric, roomStatus, noOfGuest, roomNumber, roomLocation, roomType) VALUES(@bookingID, @nric, @noOfGuest, @roomStatus, @roomNumber, @roomLocation, @roomType)";
+                comm.CommandText = "INSERT INTO Room_Details(bookingID, nric, roomStatus, noOfGuest, roomNumber, roomLocation, roomType) VALUES(@bookingID, @nric, @roomStatus, @noOfGuest , @roomNumber, @roomLocation, @roomType)";
 
                 comm.Parameters.AddWithValue("@bookingID", bd.bookingID);
                 comm.Parameters.AddWithValue("@nric", bd.nric);
-                comm.Parameters.AddWithValue("@noOfGuest", bd.noOfGuest);
                 comm.Parameters.AddWithValue("@roomStatus", bd.roomStatus);
+                comm.Parameters.AddWithValue("@noOfGuest", bd.noOfGuest);
                 comm.Parameters.AddWithValue("@roomNumber", bd.roomNumber);
                 comm.Parameters.AddWithValue("@roomLocation", bd.roomLocation);
                 comm.Parameters.AddWithValue("@roomType", bd.roomType);
@@ -119,10 +119,10 @@ namespace SWEN_Assignment_3.DBClasses
                 conn.Open();
                 SqlCommand comm = new SqlCommand();
                 comm.Connection = conn;
-                comm.CommandText = "UPDATE Room_Details SET nric=@nric, noOfGuest=@noOfGuest, roomStatus=@roomStatus, roomNumber=@roomNumber, roomLocation=@roomLocation, roomType=@roomType";
+                comm.CommandText = "UPDATE Room_Details SET nric=@nric, roomStatus=@roomStatus, noOfGuest=@noOfGuest, roomNumber=@roomNumber, roomLocation=@roomLocation, roomType=@roomType";
                 comm.Parameters.AddWithValue("@nric", bd.nric);
-                comm.Parameters.AddWithValue("@noOfGuest", bd.noOfGuest);
                 comm.Parameters.AddWithValue("@roomStatus", bd.roomStatus);
+                comm.Parameters.AddWithValue("@noOfGuest", bd.noOfGuest);
                 comm.Parameters.AddWithValue("@roomNumber", bd.roomNumber);
                 comm.Parameters.AddWithValue("@roomLocation", bd.roomLocation);
                 comm.Parameters.AddWithValue("@roomType", bd.roomType);
@@ -151,7 +151,7 @@ namespace SWEN_Assignment_3.DBClasses
                 //Prepare SQL command and pass parameters
                 SqlCommand comm = new SqlCommand();
                 comm.Connection = conn;
-                comm.CommandText = " DELETE FROM Guest_Details INNER JOIN Room_Details ON (Guest_Details.nric = Room_Details.nric) WHERE Guest_Details.nric=@nric";
+                comm.CommandText = " DELETE FROM Guest_Details JOIN Room_Details ON Guest_Details.nric = Room-Details WHERE nric=@nric";
                 comm.Parameters.AddWithValue("@nric", nric);
                 //Execute SQL commmand and read data
                 rowdeleted = comm.ExecuteNonQuery();
