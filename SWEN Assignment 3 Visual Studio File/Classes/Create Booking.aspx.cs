@@ -32,14 +32,16 @@ namespace SWEN_Assignment_3.Classes
             bd.bookingID = bookingIDTB.Text;
             bd.nric = nricTB.Text;
             bd.noOfGuest = Convert.ToInt32(noOfGuestTB.Text);
-            bd.roomStatus = roomStatusTB.Text;
-            bd.roomNumber = roomNumberTB.Text;
-            bd.roomLocation = roomNumberTB.Text;
+            bd.roomStatus = roomStatusRB.SelectedValue;
+            bd.roomNumber = roomNumberDDL.Text;
+            bd.roomLocation = roomLocationTB.Text;
             bd.roomType = roomTypeTB.Text;
+
+            ci.bookingID = bookingIDTB.Text;
 
             int rows = DBManager.InsertGuestDetails(gd);
             int rows2 = DBManager.InsertGuestBookingDetails(bd);
-            //int rows3 = DBManager.InsertCheckInDetails(ci);
+            int rows3 = DBManager.InsertCheckInDetails(ci);
             if (rows > 0)
             {
                 string querystring = "nric=" + firstNameTB.Text + "&"
@@ -61,9 +63,9 @@ namespace SWEN_Assignment_3.Classes
                 string querystring = "bookingID=" + bookingIDTB.Text + "&"
                    + "nric=" + nricTB.Text + "&"
                    + "noOfGuest=" + noOfGuestTB.Text + "&"
-                   + "roomStatus=" + roomStatusTB.Text + "&"
+                   + "roomStatus=" + roomStatusRB.SelectedValue + "&"
                    + "phoneNumber=" + phoneNumberTB.Text + "&"
-                   + "roomNumber=" + roomNumberTB.Text + "&"
+                   + "roomNumber=" + roomNumberDDL.SelectedItem + "&"
                    + "roomLocation=" + roomLocationTB.Text + "&"
                    + "roomType=" + roomTypeTB.Text;
 
@@ -73,18 +75,16 @@ namespace SWEN_Assignment_3.Classes
             {
                 errormsg.Text = "Error, cannot create";
             }
-            //if (rows3 > 0)
-            //{
-            //    string querystring = "bookingID=" + bookingIDTB.Text;// +"&"
-            //      // + "checkInDate=" + checkInDateTB.Text + "&"
-            //      // + "checkInTime=" + checkInTimeTB.Text;
-               
-            //    errormsg.Text = "Booking is Successful!";
-            //}
-            //else
-            //{
-            //    errormsg.Text = "Error, cannot create";
-            //}
+            if (rows3 > 0)
+            {
+                string querystring = "bookingID=" + bookingIDTB.Text;
+
+                errormsg.Text = "Booking is Successful!";
+            }
+            else
+            {
+                errormsg.Text = "Error, cannot create";
+            }
         }
 
 

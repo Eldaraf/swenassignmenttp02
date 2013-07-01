@@ -77,32 +77,34 @@ namespace SWEN_Assignment_3.DBClasses
             return rowadded;
         }
 
-        //public static int InsertCheckInDetails (CheckIn ci)
-        //{
-        //    int rowadded = 0;
-        //    SqlConnection conn = null;
-        //    try
-        //    {
-        //        conn = new SqlConnection();
-        //        conn.ConnectionString = ConfigurationManager.ConnectionStrings["DBscriptConnectionString"].ConnectionString;
-        //        conn.Open();
+        public static int InsertCheckInDetails(CheckIn ci)
+        {
+            int rowadded = 0;
+            SqlConnection conn = null;
+            try
+            {
+                string now = DateTime.Now.ToString("yyyy-MM-dd");
+                string now2 =  DateTime.Now.ToString("hh:mm:ss");
+                conn = new SqlConnection();
+                conn.ConnectionString = ConfigurationManager.ConnectionStrings["DBscriptConnectionString"].ConnectionString;
+                conn.Open();
 
-        //        SqlCommand comm = new SqlCommand();
-        //        comm.Connection = conn;
-        //        comm.CommandText = "INSERT INTO CheckIn_Details(bookingID, checkInDate, checkInTime) VALUES(@bookingID, @checkInDate, @checkInTime)";
+                SqlCommand comm = new SqlCommand();
+                comm.Connection = conn;
+                comm.CommandText = "INSERT INTO CheckIn_Details(bookingID, checkInDate, checkInTime) VALUES(@bookingID, @checkInDate, @checkInTime)";
 
-        //        comm.Parameters.AddWithValue("@bookingID", ci.bookingID);
-        //        comm.Parameters.AddWithValue("@checkInDate", DateTime.Now.ToLongDateString());
-        //        comm.Parameters.AddWithValue("@checkInTime", DateTime.Now.ToShortTimeString());
+                comm.Parameters.AddWithValue("@bookingID", ci.bookingID);
+                comm.Parameters.AddWithValue("@checkInDate", now);
+                comm.Parameters.AddWithValue("@checkInTime", now2);
 
-        //        rowadded = comm.ExecuteNonQuery();
-        //    }
-        //    catch (SqlException e)
-        //    {
-        //        throw e;
-        //    }
-        //    return rowadded;
-        //}
+                rowadded = comm.ExecuteNonQuery();
+            }
+            catch (SqlException e)
+            {
+                throw e;
+            }
+            return rowadded;
+        }
 
  
 

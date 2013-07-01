@@ -5,10 +5,15 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
+    <style type="text/css">
+        .auto-style1 {
+            text-align: right;
+        }
+    </style>
 </head>
 <body>
     <form id="form1" runat="server">
-    <div style="width: 278px; text-align: right">
+    <div style="width: 317px; " class="auto-style1">
     
         Booking ID:
         <asp:TextBox ID="bookingIDTB" runat="server" OnTextChanged="bookingIDTB_TextChanged"></asp:TextBox>
@@ -40,11 +45,19 @@ First Name:
         Number Of Guest:
         <asp:TextBox ID="noOfGuestTB" runat="server"></asp:TextBox>
         <br />
-        Room Status:
-        <asp:TextBox ID="roomStatusTB" runat="server"></asp:TextBox>
+        Room Status:<asp:RadioButtonList ID="roomStatusRB" runat="server" Height="24px" RepeatColumns="2" RepeatDirection="Horizontal" RepeatLayout="Flow" style="margin-left: 0px" Width="191px">
+            <asp:ListItem>Unavailable</asp:ListItem>
+            <asp:ListItem>Available</asp:ListItem>
+        </asp:RadioButtonList>
+&nbsp;&nbsp;&nbsp;
         <br />
         Room Number
-        <asp:TextBox ID="roomNumberTB" runat="server"></asp:TextBox>
+        :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <asp:DropDownList ID="roomNumberDDL" runat="server" style="margin-left: 0px">
+            <asp:ListItem>Room 1</asp:ListItem>
+            <asp:ListItem>Room 2</asp:ListItem>
+            <asp:ListItem>Room 3</asp:ListItem>
+            <asp:ListItem>Room 4</asp:ListItem>
+        </asp:DropDownList>
         <br />
         Room Location:
         <asp:TextBox ID="roomLocationTB" runat="server"></asp:TextBox>
