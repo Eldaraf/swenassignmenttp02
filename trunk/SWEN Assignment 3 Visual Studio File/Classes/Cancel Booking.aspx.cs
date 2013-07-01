@@ -46,7 +46,7 @@ namespace SWEN_Assignment_3.Classes
             string connectionString = "Data Source=(local);Initial Catalog=RoomBooking;Integrated Security=False;User ID=User;Password=Password_2013";
             SqlConnection con = new SqlConnection(connectionString);
 
-            string selectSql = @"Select * FROM Guest_Details INNER JOIN Room_Details ON (Guest_Details.nric = Room_Details.nric) WHERE Guest_Details.nric=@nric";
+            string selectSql = @"Select * FROM Room_Details INNER JOIN Guest_Details ON (Room_Details.nric = Guest_Details.nric) WHERE Room_Details.nric=@nric";
             SqlCommand com = new SqlCommand(selectSql, con);
 
             try

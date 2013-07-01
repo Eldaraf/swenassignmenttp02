@@ -127,9 +127,9 @@
       <DependentUpon>Update Successful.aspx</DependentUpon>
     </Compile>
     <Compile Include="DBClasses\BookingDetails.cs" />
+    <Compile Include="DBClasses\CheckIn.cs" />
     <Compile Include="DBClasses\DBManager.cs" />
     <Compile Include="DBClasses\Guest Details.cs" />
-    <Compile Include="DBClasses\Rooms.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
