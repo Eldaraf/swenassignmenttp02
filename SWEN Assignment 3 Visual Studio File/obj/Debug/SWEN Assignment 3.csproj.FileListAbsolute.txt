@@ -3,3 +3,7 @@ C:\Users\1101387G\Desktop\SWEN A3\SWEN Assignment 3 Visual Studio File\bin\SWEN 
 C:\Users\1101387G\Desktop\SWEN A3\SWEN Assignment 3 Visual Studio File\obj\Debug\SWEN Assignment 3.csprojResolveAssemblyReference.cache
 C:\Users\1101387G\Desktop\SWEN A3\SWEN Assignment 3 Visual Studio File\obj\Debug\SWEN Assignment 3.dll
 C:\Users\1101387G\Desktop\SWEN A3\SWEN Assignment 3 Visual Studio File\obj\Debug\SWEN Assignment 3.pdb
+C:\Users\1101387G\Desktop\Assignment 3\bin\SWEN Assignment 3.dll
+C:\Users\1101387G\Desktop\Assignment 3\bin\SWEN Assignment 3.pdb
+C:\Users\1101387G\Desktop\Assignment 3\obj\Debug\SWEN Assignment 3.dll
+C:\Users\1101387G\Desktop\Assignment 3\obj\Debug\SWEN Assignment 3.pdb

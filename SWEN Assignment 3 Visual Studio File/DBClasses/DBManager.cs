@@ -77,6 +77,33 @@ namespace SWEN_Assignment_3.DBClasses
             return rowadded;
         }
 
+        //public static int InsertCheckInDetails (CheckIn ci)
+        //{
+        //    int rowadded = 0;
+        //    SqlConnection conn = null;
+        //    try
+        //    {
+        //        conn = new SqlConnection();
+        //        conn.ConnectionString = ConfigurationManager.ConnectionStrings["DBscriptConnectionString"].ConnectionString;
+        //        conn.Open();
+
+        //        SqlCommand comm = new SqlCommand();
+        //        comm.Connection = conn;
+        //        comm.CommandText = "INSERT INTO CheckIn_Details(bookingID, checkInDate, checkInTime) VALUES(@bookingID, @checkInDate, @checkInTime)";
+
+        //        comm.Parameters.AddWithValue("@bookingID", ci.bookingID);
+        //        comm.Parameters.AddWithValue("@checkInDate", DateTime.Now.ToLongDateString());
+        //        comm.Parameters.AddWithValue("@checkInTime", DateTime.Now.ToShortTimeString());
+
+        //        rowadded = comm.ExecuteNonQuery();
+        //    }
+        //    catch (SqlException e)
+        //    {
+        //        throw e;
+        //    }
+        //    return rowadded;
+        //}
+
  
 
 
@@ -150,7 +177,7 @@ namespace SWEN_Assignment_3.DBClasses
                 //Prepare SQL command and pass parameters
                 SqlCommand comm = new SqlCommand();
                 comm.Connection = conn;
-                comm.CommandText = " DELETE FROM Guest_Details JOIN Room_Details ON Guest_Details.nric = Room-Details WHERE nric=@nric";
+                comm.CommandText = " DELETE FROM Room_Details WHERE nric=@nric; DELETE FROM Guest_Details WHERE nric=@nric";
                 comm.Parameters.AddWithValue("@nric", nric);
                 //Execute SQL commmand and read data
                 rowdeleted = comm.ExecuteNonQuery();

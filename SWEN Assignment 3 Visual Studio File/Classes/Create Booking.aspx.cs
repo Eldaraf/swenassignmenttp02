@@ -20,6 +20,7 @@ namespace SWEN_Assignment_3.Classes
         {
             GuestDetails gd = new GuestDetails();
             BookingDetails bd = new BookingDetails();
+            CheckIn ci = new CheckIn();
 
             gd.nric = nricTB.Text;
             gd.firstName = firstNameTB.Text;
@@ -38,6 +39,7 @@ namespace SWEN_Assignment_3.Classes
 
             int rows = DBManager.InsertGuestDetails(gd);
             int rows2 = DBManager.InsertGuestBookingDetails(bd);
+            //int rows3 = DBManager.InsertCheckInDetails(ci);
             if (rows > 0)
             {
                 string querystring = "nric=" + firstNameTB.Text + "&"
@@ -65,17 +67,36 @@ namespace SWEN_Assignment_3.Classes
                    + "roomLocation=" + roomLocationTB.Text + "&"
                    + "roomType=" + roomTypeTB.Text;
 
-                errormsg.Text = "Update Successful!";
+                errormsg.Text = "Booking is Successful!";
             }
             else
             {
                 errormsg.Text = "Error, cannot create";
             }
+            //if (rows3 > 0)
+            //{
+            //    string querystring = "bookingID=" + bookingIDTB.Text;// +"&"
+            //      // + "checkInDate=" + checkInDateTB.Text + "&"
+            //      // + "checkInTime=" + checkInTimeTB.Text;
+               
+            //    errormsg.Text = "Booking is Successful!";
+            //}
+            //else
+            //{
+            //    errormsg.Text = "Error, cannot create";
+            //}
         }
 
+
+        
         protected void Button2_Click(object sender, EventArgs e)
         {
            Response.Redirect("Home Page.aspx");
+        }
+
+        protected void bookingIDTB_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

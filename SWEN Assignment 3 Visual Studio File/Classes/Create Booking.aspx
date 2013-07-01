@@ -11,7 +11,7 @@
     <div style="width: 278px; text-align: right">
     
         Booking ID:
-        <asp:TextBox ID="bookingIDTB" runat="server"></asp:TextBox>
+        <asp:TextBox ID="bookingIDTB" runat="server" OnTextChanged="bookingIDTB_TextChanged"></asp:TextBox>
         <br />
         <br />
         NRIC:
