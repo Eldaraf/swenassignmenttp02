@@ -26,7 +26,11 @@
 &nbsp;
         <asp:Button ID="Button3" runat="server" Text="Cancel Booking" Width="123px" OnClick="Button3_Click" />
 &nbsp;
-        &nbsp;
+            
+        <asp:Button ID="Button4" runat="server" Text="Check Room Availability" Width="159px" OnClick="Button4_Click" />
+            
+&nbsp;
+        <asp:Button ID="Button5" runat="server" Text="Update Room Availability" OnClick="Button5_Click" Width="169px" />
             
     </div>
     </form>

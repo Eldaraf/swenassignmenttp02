@@ -28,5 +28,15 @@ namespace SWEN_Assignment_3.Classes
         {
             Response.Redirect("Cancel Booking.aspx");
         }
+
+        protected void Button4_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Check Room Availability.aspx");
+        }
+
+        protected void Button5_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Update RAS.aspx");
+        }
     }
 }
