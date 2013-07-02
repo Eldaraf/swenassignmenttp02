@@ -45,19 +45,19 @@ First Name:
         Number Of Guest:
         <asp:TextBox ID="noOfGuestTB" runat="server"></asp:TextBox>
         <br />
-        Room Status:<asp:RadioButtonList ID="roomStatusRB" runat="server" Height="24px" RepeatColumns="2" RepeatDirection="Horizontal" RepeatLayout="Flow" style="margin-left: 0px" Width="191px">
-            <asp:ListItem>Unavailable</asp:ListItem>
-            <asp:ListItem>Available</asp:ListItem>
-        </asp:RadioButtonList>
-&nbsp;&nbsp;&nbsp;
-        <br />
         Room Number
-        :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <asp:DropDownList ID="roomNumberDDL" runat="server" style="margin-left: 0px">
+        :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <asp:DropDownList ID="roomNumberDDL" runat="server" style="margin-left: 0px" OnSelectedIndexChanged="roomNumberDDL_SelectedIndexChanged">
             <asp:ListItem>Room 1</asp:ListItem>
             <asp:ListItem>Room 2</asp:ListItem>
             <asp:ListItem>Room 3</asp:ListItem>
             <asp:ListItem>Room 4</asp:ListItem>
         </asp:DropDownList>
+        <br />
+        Room Status:<asp:RadioButtonList ID="roomStatusRB" runat="server" Height="24px" RepeatColumns="2" RepeatDirection="Horizontal" RepeatLayout="Flow" style="margin-left: 0px" Width="191px">
+            <asp:ListItem>Unavailable</asp:ListItem>
+            <asp:ListItem>Available</asp:ListItem>
+        </asp:RadioButtonList>
+&nbsp;&nbsp;&nbsp;
         <br />
         Room Location:
         <asp:TextBox ID="roomLocationTB" runat="server"></asp:TextBox>

@@ -83,8 +83,8 @@ namespace SWEN_Assignment_3.DBClasses
             SqlConnection conn = null;
             try
             {
-                string now = DateTime.Now.ToString("yyyy-MM-dd");
-                string now2 =  DateTime.Now.ToString("hh:mm:ss");
+                string now = DateTime.Now.ToString("dd-MM-yyyy");
+                string now2 =  DateTime.Now.ToString("hh:mm");
                 conn = new SqlConnection();
                 conn.ConnectionString = ConfigurationManager.ConnectionStrings["DBscriptConnectionString"].ConnectionString;
                 conn.Open();
@@ -191,7 +191,6 @@ namespace SWEN_Assignment_3.DBClasses
             }
             return rowdeleted;
         }
-
 
     }
 }
