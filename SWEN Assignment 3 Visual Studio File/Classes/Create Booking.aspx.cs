@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using SWEN_Assignment_3.DBClasses;
+using System.Data.SqlClient;
 
 namespace SWEN_Assignment_3.Classes
 {
@@ -96,6 +97,15 @@ namespace SWEN_Assignment_3.Classes
 
         protected void bookingIDTB_TextChanged(object sender, EventArgs e)
         {
+
+        }
+
+      
+
+        protected void roomNumberDDL_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+
 
         }
     }

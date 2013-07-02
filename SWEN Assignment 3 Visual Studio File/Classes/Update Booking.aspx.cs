@@ -80,7 +80,7 @@ namespace SWEN_Assignment_3.Classes
             bd.roomStatus = roomStatusTB.Text;
             bd.noOfGuest = Convert.ToInt32(noOfGuestTB.Text);
             bd.roomNumber = roomNumberTB.Text;
-            bd.roomLocation = roomNumberTB.Text;
+            bd.roomLocation = roomLocationTB.Text;
             bd.roomType = roomTypeTB.Text;
 
             int rows = DBManager.UpdateGuestDetails(gd);

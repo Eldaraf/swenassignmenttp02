@@ -103,15 +103,6 @@ namespace SWEN_Assignment_3.Classes {
         protected global::System.Web.UI.WebControls.TextBox noOfGuestTB;
         
         /// <summary>
-        /// roomStatusRB control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButtonList roomStatusRB;
-        
-        /// <summary>
         /// roomNumberDDL control.
         /// </summary>
         /// <remarks>
@@ -119,6 +110,15 @@ namespace SWEN_Assignment_3.Classes {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList roomNumberDDL;
+        
+        /// <summary>
+        /// roomStatusRB control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RadioButtonList roomStatusRB;
         
         /// <summary>
         /// roomLocationTB control.
