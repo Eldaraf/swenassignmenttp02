@@ -92,7 +92,7 @@ namespace SWEN_Assignment_3.Classes
         
         protected void Button2_Click(object sender, EventArgs e)
         {
-           Response.Redirect("Home Page.aspx");
+           Response.Redirect("RAS Home Page.aspx");
         }
 
         protected void bookingIDTB_TextChanged(object sender, EventArgs e)
