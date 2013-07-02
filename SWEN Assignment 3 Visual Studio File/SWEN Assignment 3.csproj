@@ -61,10 +61,20 @@
     <Content Include="Classes\Check Room Availability.aspx" />
     <Content Include="Classes\Create Booking.aspx" />
     <Content Include="Classes\Delete Confirmed.aspx" />
-    <Content Include="Classes\Home Page.aspx" />
+    <Content Include="Classes\RAS Home Page.aspx" />
     <Content Include="Classes\Update Booking.aspx" />
     <Content Include="Classes\Update RAS.aspx" />
     <Content Include="Classes\Update Successful.aspx" />
+    <Content Include="Delete.aspx" />
+    <Content Include="DisplayUsers.aspx" />
+    <Content Include="Homepage.aspx" />
+    <Content Include="Login.aspx" />
+    <Content Include="LoginSuccessful.aspx" />
+    <Content Include="Logout.aspx" />
+    <Content Include="Register.aspx" />
+    <Content Include="ThankYou.aspx" />
+    <Content Include="Update.aspx" />
+    <Content Include="UsersControl.aspx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -98,12 +108,12 @@
     <Compile Include="Classes\Delete Confirmed.aspx.designer.cs">
       <DependentUpon>Delete Confirmed.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Classes\Home Page.aspx.cs">
-      <DependentUpon>Home Page.aspx</DependentUpon>
+    <Compile Include="Classes\RAS Home Page.aspx.cs">
+      <DependentUpon>RAS Home Page.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Classes\Home Page.aspx.designer.cs">
-      <DependentUpon>Home Page.aspx</DependentUpon>
+    <Compile Include="Classes\RAS Home Page.aspx.designer.cs">
+      <DependentUpon>RAS Home Page.aspx</DependentUpon>
     </Compile>
     <Compile Include="Classes\Update Booking.aspx.cs">
       <DependentUpon>Update Booking.aspx</DependentUpon>
@@ -130,7 +140,79 @@
     <Compile Include="DBClasses\CheckIn.cs" />
     <Compile Include="DBClasses\DBManager.cs" />
     <Compile Include="DBClasses\Guest Details.cs" />
+    <Compile Include="dbmanagerclass.cs" />
+    <Compile Include="Delete.aspx.cs">
+      <DependentUpon>Delete.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Delete.aspx.designer.cs">
+      <DependentUpon>Delete.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DisplayUsers.aspx.cs">
+      <DependentUpon>DisplayUsers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DisplayUsers.aspx.designer.cs">
+      <DependentUpon>DisplayUsers.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DonorUser.cs" />
+    <Compile Include="Homepage.aspx.cs">
+      <DependentUpon>Homepage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Homepage.aspx.designer.cs">
+      <DependentUpon>Homepage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LoginSuccessful.aspx.cs">
+      <DependentUpon>LoginSuccessful.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LoginSuccessful.aspx.designer.cs">
+      <DependentUpon>LoginSuccessful.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Logout.aspx.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Logout.aspx.designer.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Register.aspx.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Register.aspx.designer.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ThankYou.aspx.cs">
+      <DependentUpon>ThankYou.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ThankYou.aspx.designer.cs">
+      <DependentUpon>ThankYou.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Update.aspx.cs">
+      <DependentUpon>Update.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Update.aspx.designer.cs">
+      <DependentUpon>Update.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UsersControl.aspx.cs">
+      <DependentUpon>UsersControl.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UsersControl.aspx.designer.cs">
+      <DependentUpon>UsersControl.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="Web.Debug.config">
