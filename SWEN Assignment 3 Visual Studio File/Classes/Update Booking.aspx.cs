@@ -18,6 +18,8 @@ namespace SWEN_Assignment_3.Classes
 
         protected void Button2_Click(object sender, EventArgs e)
         {
+
+            errormsg.Text = "";
             string connectionString = "Data Source=(local);Initial Catalog=RoomBooking;Integrated Security=False;User ID=User;Password=Password_2013";
             SqlConnection con = new SqlConnection(connectionString);
 

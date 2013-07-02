@@ -24,8 +24,9 @@ namespace WebApplication1
             loginuser.Password = StorePassword;
             int login = dbmanagerclass.Logincheck(loginuser);
 
-            if (login >= 0)
-            { Server.Transfer("UsersControl.aspx?Username=" + StoreUsername); }
+            if (login != 0)
+            {   
+                Server.Transfer("UsersControl.aspx?Username=" + StoreUsername); }
             else
             { LoginLabel.Text = "invalid username or password"; }
 
