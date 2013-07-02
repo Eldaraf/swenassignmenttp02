@@ -155,15 +155,8 @@ namespace WebApplication1
         {
             int doesuserexist = 0;
             SqlConnection conn = null;
-            string testuser = newdonor.Username;
-
-            HotelUser tryuser = dbmanagerclass.searchbyusername(testuser);
-            if (tryuser !=null)
-            {
-                
-
             try
-            {   
+            {
                 conn = new SqlConnection();
                 conn.ConnectionString = ConfigurationManager.ConnectionStrings["DBscriptConnectionString"].
                 ConnectionString;
@@ -176,26 +169,15 @@ namespace WebApplication1
                 comm.Parameters.AddWithValue("@username", newdonor.Username);
                 comm.Parameters.AddWithValue("@password", newdonor.Password);
 
-                
-                
-                    doesuserexist = comm.ExecuteNonQuery();
-                    conn.Close();
-             }
+                doesuserexist = comm.ExecuteNonQuery();
+                conn.Close();
 
+            }
             catch (SqlException e)
             {
                 throw e;
             }
-            }
-            else{
             return doesuserexist;
-            
-                }
-            return newdonor.Number1;
         }
-        }
-
-        }
-        
-    
-
+    }
+}
